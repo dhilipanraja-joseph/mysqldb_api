@@ -10,10 +10,16 @@ const bodyParser = require('body-parser');
 const city = require('./cities');
 const app = express();
 
+app.set('view engine','ejs');
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
+app.get('/',(req,res)=>{
+
+  res.render('index');
+});
 app.route('/cities')
   .get((req,res)=>{
     city.allCities((err,cities)=>{
