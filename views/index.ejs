@@ -3,12 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>CityExpress</title>
-
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" charset="utf-8"></script>
     <script src="main.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="/css/master.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <h1>City Database</h1>
-    <li>
+    <form id="addForm">
+      <input id="cityName" type="text"  value="" placeholder="city name" required><br>
+      <input id="cityState" type="text"  value="" placeholder="state" required><br>
+      <input id="cityPop" type="number"  value="" placeholder="population" required><br>
+      <button type="submit" name="button">Add</button>
+      <button type="clear" name="button">Reset</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+            <th>city</th><th>state</th><th>population</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
   </body>
 </html>
